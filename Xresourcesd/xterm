@@ -1,0 +1,16 @@
+xterm*saveLines: 2048
+
+xterm*foreground: rgb:a8/a8/a8
+xterm*background: rgb:00/00/00
+
+xterm*selectToClipboard: true
+xterm*faceName: Monospace:size=12
+xterm*dynamicColors: true
+xterm*utf8: 2
+xterm*eightBitInput: true
+
+xterm*scrollBar: true
+xterm*rightScrollBar: true
+xterm*jumpScroll: true
+xterm*multiScroll: true
+
