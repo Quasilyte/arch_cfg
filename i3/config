@@ -1,0 +1,119 @@
+# i3 config file (v4)
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+ ##
+### options:
+##
+
+# Mod4 is `super' aka `window' button
+set $mod Mod4
+
+font pango:monospace 12
+
+ ##
+### bindings:
+##
+
+bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill 
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+
+ ##
+### modes:
+##
+
+bindsym $mod+r mode "frame-resize"
+bindsym $mod+b mode "brightness"
+bindsym $mod+s mode "sound"
+bindsym $mod+x mode "frame-control"
+bindsym $mod+Shift+x mode "session-control"
+
+mode "frame-resize" {
+     bindsym Right resize shrink width 10 px or 10 ppt
+     bindsym Up resize grow height 10 px or 10 ppt
+     bindsym Down resize shrink height 10 px or 10 ppt
+     bindsym Left resize grow width 10 px or 10 ppt
+
+     bindsym Escape mode "default"
+}
+
+mode "brightness" {
+     # change monitor brightness
+     bindsym m+Up exec "monli-add"
+     bindsym m+Down exec "monli-sub"
+
+     # change keyboard backlight brightness
+     bindsym k+Up exec "kbdli-add"
+     bindsym k+Down exec "kbdli-sub"
+
+     bindsym Escape mode "default"
+}
+
+mode "sound" {
+     bindsym m exec "amixer sset Master mute"
+     bindsym u exec "amixer sset Master unmute"
+
+     bindsym Up exec "amixer set Master 10+"
+     bindsym Down exec "amixer set Master 10-"
+
+     bindsym Escape mode "default"
+}
+
+mode "frame-control" {
+     # kill focused frame and attached processes
+     bindsym q kill
+
+     bindsym Escape mode "default"
+}
+
+mode "session-control" {
+     # exit i3
+     bindsym q exec "i3-msg exit"
+     
+     bindsym p exec "poweroff"
+
+     bindsym Escape mode "default"
+}
+
+ ##
+### status bar:
+##
+
+bar {
+    status_command i3status
+}

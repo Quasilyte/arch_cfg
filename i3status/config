@@ -1,0 +1,50 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+general {
+        colors = true
+        interval = 20
+}
+
+order += "disk /"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery 0"
+order += "volume master"
+order += "tztime local"
+
+disk "/" {
+        format = "SSD: %avail"
+}
+
+wireless _first_ {
+        format_up = "W: %quality"
+        format_down = "W: n/a"
+}
+
+ethernet _first_ {
+        format_up = "E: 100%"
+        format_down = "E: n/a"
+}
+
+battery 0 {
+        format = "%status%percentage[%remaining]"
+	format_down = "BAT: n/a"
+	status_chr = "BAT+"
+	status_bat = "BAT-"
+	low_threshold = 15
+}
+
+volume master {
+       format = "VOL: %volume"
+       format_muted = "VOL: muted"
+       device = "default"
+       mixer = "Master"
+       mixer_idx = 0
+}
+
+tztime local {
+        format = "%H:%M %d.%m.%Y"
+}
+
+
