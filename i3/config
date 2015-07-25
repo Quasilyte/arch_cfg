@@ -106,6 +106,7 @@ mode "session-control" {
      bindsym q exec "i3-msg exit"
      
      bindsym p exec "poweroff"
+     bindsym r exec "reboot"
 
      bindsym Escape mode "default"
 }
