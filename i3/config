@@ -58,7 +58,6 @@ bindsym $mod+Shift+5 move container to workspace 5
 ##
 
 bindsym $mod+r mode "frame-resize"
-bindsym $mod+b mode "brightness"
 bindsym $mod+s mode "sound"
 bindsym $mod+x mode "frame-control"
 bindsym $mod+Shift+x mode "session-control"
@@ -68,18 +67,6 @@ mode "frame-resize" {
      bindsym Up resize grow height 10 px or 10 ppt
      bindsym Down resize shrink height 10 px or 10 ppt
      bindsym Left resize grow width 10 px or 10 ppt
-
-     bindsym Escape mode "default"
-}
-
-mode "brightness" {
-     # change monitor brightness
-     bindsym m+Up exec "monli add > /dev/null"
-     bindsym m+Down exec "monli sub > /dev/null"
-
-     # change keyboard backlight brightness
-     bindsym k+Up exec "kbdli add > /dev/null"
-     bindsym k+Down exec "kbdli sub > /dev/null"
 
      bindsym Escape mode "default"
 }

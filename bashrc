@@ -18,7 +18,7 @@ declare -A wifi_profiles=(
 )
 
 wifi-start() {
-    if [ ${wifi_profiles[$1]} ]; then
+    if [[ ${wifi_profiles[$1]} ]]; then
 	netctl start ${wifi_profiles[$1]}
     else
 	echo "invalid wifi profile given"
