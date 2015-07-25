@@ -5,3 +5,14 @@ echo 2 > /sys/module/hid_apple/parameters/fnmode
 
 echo XHC1 > /proc/acpi/wakeup
 echo LID0 > /prop/acpi/wakeup
+
+# lets try to set optimal monitor brightness
+nrg=$(acpi)
+nrg=${nrg:24:2}
+if [[ nrg -gt 50 ]]; then
+    monli set 90
+elif [[ nrg -gt 25 ]]; then
+    monli set 70
+else
+    monli set 50
+fi
