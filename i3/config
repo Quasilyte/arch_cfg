@@ -74,12 +74,12 @@ mode "frame-resize" {
 
 mode "brightness" {
      # change monitor brightness
-     bindsym m+Up exec "monli-add"
-     bindsym m+Down exec "monli-sub"
+     bindsym m+Up exec "monli add > /dev/null"
+     bindsym m+Down exec "monli sub > /dev/null"
 
      # change keyboard backlight brightness
-     bindsym k+Up exec "kbdli-add"
-     bindsym k+Down exec "kbdli-sub"
+     bindsym k+Up exec "kbdli add > /dev/null"
+     bindsym k+Down exec "kbdli sub > /dev/null"
 
      bindsym Escape mode "default"
 }
