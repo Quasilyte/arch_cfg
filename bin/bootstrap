@@ -3,6 +3,8 @@
 echo -n 1 > /sys/devices/system/cpu/intel_pstate/no_turbo
 echo 2 > /sys/module/hid_apple/parameters/fnmode
 
+sudo -s
+
 echo XHC1 > /proc/acpi/wakeup
 echo LID0 > /prop/acpi/wakeup
 

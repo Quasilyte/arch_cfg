@@ -24,3 +24,4 @@
 ($u-inc "backups")
 ($u-inc "vars")
 ($u-inc "funcs")
+($u-inc "autoloads")

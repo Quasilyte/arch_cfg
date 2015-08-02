@@ -10,6 +10,9 @@ PS1='[\u@\h \W]\$ '
 
 # User-defined below:
 
+alias tar="tar -xvf "
+alias g++="g++ -std=c++11 -pedantic -Wall -Wextra -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wnoexcept -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wshadow -Wsign-conversion -Wsign-promo -Wstrict-null-sentinel -Wstrict-overflow=5 -Wswitch-default -Wundef -Werror -Wno-unused "
+
 export PATH="/home/quasilyte/.cask/bin:$PATH"
 
 declare -A wifi_profiles=(

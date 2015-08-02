@@ -10,4 +10,6 @@
 (show-paren-mode 2)
 
 (set-face-background 'show-paren-match "#000")
+(set-face-attribute 'default nil :height 120)
+
 
