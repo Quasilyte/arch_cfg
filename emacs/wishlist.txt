@@ -1,4 +1,6 @@
 -- multi-file/buffer search
+-- english-russian russian-english translators
+-- more snippets
 
 c++/c:
 * build/make helpers
@@ -8,3 +10,5 @@ modes:
 * go
 * php
 * racket
+* scala
+* clojure

@@ -21,7 +21,7 @@
 (defun $v-add (dir)
   (add-to-list 'load-path (concat $emacsd "/vendor/" dir)))
 
-($u-inc '("incs" "backups" "vars"
-	  "funcs" "autoloads" "keybinds"))
+($u-inc '("incs" "vars" "funcs"
+	  "autoloads" "keybinds"))
 
 (column-number-mode)
