@@ -8,3 +8,6 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
+(require 'ido)
+(ido-mode t)
+; (setq ido-enable-flex-matching t)

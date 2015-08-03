@@ -23,3 +23,5 @@
 
 ($u-inc '("incs" "backups" "vars"
 	  "funcs" "autoloads" "keybinds"))
+
+(column-number-mode)

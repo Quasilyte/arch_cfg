@@ -1,3 +1,16 @@
+;;;;;;;;;;;;;;;;;;;;;
+;;;; global bindings:
+
+(dolist (opt '(("C-s" save-buffer)
+	       ("C-x f" find-file)
+	       ("C-f" isearch-forward)
+	       ("C-S-f" isearch-backward)
+	       ("C-b" switch-to-buffer)
+	       ("C-S-w" other-window)
+	       ("C-v" yank)
+	       ("C-z" undo)))
+  (global-set-key (kbd (car opt)) (nth 1 opt)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; bindings for major modes:
 
@@ -11,4 +24,4 @@
   (add-hook 'c-mode-hook opts)
   (add-hook 'c++-mode-hook opts))
 
-;; (key-binding (kbd "C-x C-w"))
+

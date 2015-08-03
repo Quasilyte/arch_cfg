@@ -1,0 +1,10 @@
+-- multi-file/buffer search
+
+c++/c:
+* build/make helpers
+* more macro commands
+
+modes:
+* go
+* php
+* racket

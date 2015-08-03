@@ -1,0 +1,50 @@
+(defun binding (sequence)
+  (key-binding (kbd sequence)))
+
+;; save & exit
+(binding "C-x C-c") ; save-buffers-kill-terminal
+
+;;; movement
+
+(binding "C-<left>") ; left-word
+(binding "C-<right>") ; right-word
+(binding "C-<up>") ; backward-paragraph
+(binding "C-<down>") ; forward-paragraph
+
+;; those are conveniently fn+<left> fn-<right> on mac^^
+(binding "<home>") ; move-beginning-of-line
+(binding "<end>") ; move-end-of-line
+
+;;; file/buffers
+
+(binding "C-x f") ; find-file
+(binding "C-b") ; switch-to-buffer
+
+;; save to file
+(binding "C-s") ; save-buffer
+;; save to file as
+(binding "C-x C-w") ; write-file
+
+;;; windows
+
+(binding "C-S-w") ; other-window
+
+(binding "C-x 1") ; delete-other-windows
+(binding "C-x 2") ; split-window-below
+(binding "C-x 3") ; split-window-right
+
+;;; control
+
+(binding "C-f") ; isearch-forward
+(binding "C-S-f") ; isearch-backward # todo - change to cross-file search
+
+
+(binding "C-g") ; keyboard-quit
+(binding "ESC ESC ESC") ; keyboard-escape-quit
+
+;; copy / cut / paste
+(binding "M-w") ; kill-ring-save
+(binding "C-w") ; kill-region
+(binding "C-v") ; yank
+
+(binding "C-z") ; undo (to redo, do undo after non-editing command)
