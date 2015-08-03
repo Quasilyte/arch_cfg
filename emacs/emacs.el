@@ -14,14 +14,12 @@
 
 (setq $emacsd (concat (getenv "HOME") "/.emacs.d/"))
 
-(defun $u-inc (file)
-  (load (concat $emacsd "user/" file ".el")))
+(defun $u-inc (files)
+  (dolist (file files)
+    (load (concat $emacsd "user/" file ".el"))))
 
 (defun $v-add (dir)
   (add-to-list 'load-path (concat $emacsd "/vendor/" dir)))
 
-($u-inc "incs")
-($u-inc "backups")
-($u-inc "vars")
-($u-inc "funcs")
-($u-inc "autoloads")
+($u-inc '("incs" "backups" "vars"
+	  "funcs" "autoloads" "keybinds"))
