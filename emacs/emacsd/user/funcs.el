@@ -36,8 +36,8 @@
 
 (defun $perl-escapable-p (c)
   (or (= ?| c)
-      (= ?( c)
-      (= ?) c)))
+      (= ?\( c)
+      (= ?\) c)))
 
 (defun $perl-escape-elisp (s)
   (mapconcat (lambda (c)
