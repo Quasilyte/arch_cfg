@@ -9,6 +9,7 @@ go get -v github.com/rogpeppe/godef
 go get -v golang.org/x/tools/cmd/goimports
 go get -v golang.org/x/tools/cmd/gorename
 go get -v github.com/mvdan/gogrep
+go get -v golang.org/x/tools/cmd/stringer
 
 # Tools for contributing to Go.
 # TODO.
